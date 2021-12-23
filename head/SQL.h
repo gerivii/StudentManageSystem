@@ -89,7 +89,7 @@ int SqlFindRow(char *table, char *key, char** values);
  * @retval 0 失败
  * @retval 1 成功
  */
-int SqlFindCol(char *table, char *colName, char** values)
+int SqlFindCol(char *table, char *colName, char** values);
 
 /**
  * @brief 查询指定表下数据某一条指定列下的数据

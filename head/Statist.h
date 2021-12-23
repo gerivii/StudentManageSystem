@@ -79,7 +79,7 @@ int Ave(char *course_id, float ave);
  * @param[out] max 最高分
  * @return
  */
-int Max(char *course_id, float max,);
+int Max(char *course_id, float max);
 
 /**
  * @brief 查询课程的最低分
