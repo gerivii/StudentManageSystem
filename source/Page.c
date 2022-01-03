@@ -150,7 +150,7 @@ __attribute__((unused)) void ShowStu() {
 __attribute__((unused)) void ShowTea() {
     char scores[10][20];
     char temp[20];
-    int i = 0;
+    int i;
     float max = 0, min = 0, ave = 0;
 
     system("cls");
@@ -216,8 +216,43 @@ __attribute__((unused)) void ShowTea() {
         default:
             printf("感谢使用本系统!\n");
             break;
-
     }
-
 }
 
+__attribute__((unused)) void ShowAdmin() {
+    char *f = "1";
+
+    system("cls");
+    printf("----------欢迎登录学生管理系统----------\n");
+    printf("功能选择:\n");
+    printf("1、账号权限修改\n");
+    printf("2、账号删除\n");
+    printf("------------------------------------\n");
+    printf("输入您要选择的功能序号,输入其他数字以退出系统:");
+    scanf("%d", &n);
+    switch (n) {
+        case 1:
+            printf("输入想要修改权限的账号:");
+            scanf("%s", account);
+            printf("选择修改后的权限:\n1、学生\n2、教师\n3、管理员\n");
+            scanf("%s", f);
+            if (ChangePermission(account, f)) {
+                printf("修改成功!\n");
+            } else {
+                printf("修改失败!\n");
+            }
+            break;
+        case 2:
+            printf("输入要删除的账号:");
+            scanf("%s", account);
+            if (DelAccount(account)) {
+                printf("删除成功!\n");
+            } else {
+                printf("删除失败!\n");
+            }
+            break;
+        default:
+            printf("感谢使用本系统!\n");
+            break;
+    }
+}
