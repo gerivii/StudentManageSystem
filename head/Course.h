@@ -21,7 +21,7 @@
  * @retval 0 失败
  * @retval 1 成功
  */
-int CourseAdd(char *course_id, char *course_name, char *classroom, char *teacher_id);
+__attribute__((unused)) int CourseAdd(char *course_id, char *course_name, char *classroom, char *teacher_id);
 
 /**
  * @brief 根据课程id删除课程
@@ -30,7 +30,7 @@ int CourseAdd(char *course_id, char *course_name, char *classroom, char *teacher
  * @retval 0 失败
  * @retval 1 成功
  */
-int CourseDel(char *course_id);
+__attribute__((unused)) int CourseDel(char *course_id);
 
 /**
  * @brief 根据课程号修改课程的全部信息
@@ -43,7 +43,7 @@ int CourseDel(char *course_id);
  * @retval 0 失败
  * @retval 1 成功
  */
-int CourseEdit(char *course_id, char *course_name, char *classroom, char *teacher_id);
+__attribute__((unused)) int CourseEdit(char *course_id, char *course_name, char *classroom, char *teacher_id);
 
 /**
  * @brief 根据课程号修改课程的名字
@@ -53,7 +53,7 @@ int CourseEdit(char *course_id, char *course_name, char *classroom, char *teache
  * @retval 0 失败
  * @retval 1 成功
  */
-int CourseEditName(char *course_id, char *course_name);
+__attribute__((unused)) int CourseEditName(char *course_id, char *course_name);
 
 /**
  * @brief 根据课程号修改课程所在的上课教室
@@ -63,7 +63,7 @@ int CourseEditName(char *course_id, char *course_name);
  * @retval 0 失败
  * @retval 1 成功
  */
-int CourseEditClassroom(char *course_id, char *classroom);
+__attribute__((unused)) int CourseEditClassroom(char *course_id, char *classroom);
 
 /**
  * @brief 根据课程号修改课程的教师id
@@ -73,7 +73,7 @@ int CourseEditClassroom(char *course_id, char *classroom);
  * @retval 0 失败
  * @retval 1 成功
  */
-int CourseEditTeacherId(char *course_id, char *teacher_id);
+__attribute__((unused)) int CourseEditTeacherId(char *course_id, char *teacher_id);
 
 
 /**
@@ -87,7 +87,7 @@ int CourseEditTeacherId(char *course_id, char *teacher_id);
  * @retval 0 失败
  * @retval 1 成功
  */
-int CourseFind(char* course_id, char* course_name, char* classroom, char* teacher_id);
+__attribute__((unused)) int CourseFind(char* course_id, char* course_name, char* classroom, char* teacher_id);
 
 
 #endif //STUDENTMANAGESYSTEM_COURSE_H

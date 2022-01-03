@@ -14,13 +14,12 @@
  * @brief 向成绩表内添加一条数据
  * @details 没有该门课程成绩则分数记为-1
  * @param[in] student_id 学号
- * @param[in] K0001 课程K0001的成绩
- * @param[in] ... 后继课程成绩
+ * @param[in] scores 存放所有的分数
  * @return 是否添加成功
  * @retval 0 失败
  * @retval 1 成功
  */
-int ScoreAdd(char *student_id, char *K0001, ...);
+__attribute__((unused)) int ScoreAdd(char *student_id, char scores[10][20]);
 
 /**
  * @brief   根据学生id删除成绩
@@ -29,17 +28,17 @@ int ScoreAdd(char *student_id, char *K0001, ...);
  * @retval 0    失败
  * @retval 1    成功
  */
-int ScoreDel(char *student_id);
+__attribute__((unused)) int ScoreDel(char *student_id);
 
 /**
- * @brief 修改对应学生的课程号
+ * @brief 修改对应学生的课程成绩
  * @param[in] student_id 学生id
  * @param[in] course_id 课程具体编号
  * @return 是否修改成功
  * @retval 0 失败
  * @retval 1 成功
  */
-int Edit(char *student_id, char *course_id);
+__attribute__((unused)) int ScoreEdit(char *student_id, char *course_id, char *score);
 
 /**
  * @brief 查找对应学生id下的全部成绩
@@ -50,7 +49,7 @@ int Edit(char *student_id, char *course_id);
  * @retval 0 失败
  * @retval 1 成功
  */
-int Find(char *student_id, float * grades);
+__attribute__((unused)) int ScoreFind(char *student_id, char * grades);
 
 /**
  * @brief 查找该学生id下对应课程号的成绩
@@ -62,7 +61,7 @@ int Find(char *student_id, float * grades);
  * @retval 0 失败
  * @retval 1 成功
  */
-float FindCourse(char *student_id, char *course_id, float grade);
+__attribute__((unused)) char ScoreFindCourse(char *student_id, char *course_id, char *grade);
 
 
 #endif //STUDENTMANAGESYSTEM_SCORE_H

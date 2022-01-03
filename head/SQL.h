@@ -1,10 +1,10 @@
 /**
  * @file SQL.h
- * @brief æ•°æ®å¤´æ–‡ä»¶
- * @details åŒ…å«è¿æ¥ç®¡ç†æ•°æ®åº“åº“ç›¸å…³çš„å¤´æ–‡ä»¶
+ * @brief Êı¾İÍ·ÎÄ¼ş
+ * @details °üº¬Á¬½Ó¹ÜÀíÊı¾İ¿â¿âÏà¹ØµÄÍ·ÎÄ¼ş
  * @author gerivii
- * @date 2021-12-16
- * @version 1.0
+ * @date 2021-1-2
+ * @version 1.2
  */
 
 
@@ -13,95 +13,130 @@
 
 
 /**
- * @brief å‘æ•°æ®åº“æŒ‡å®šè¡¨å†…æ·»åŠ ä¿¡æ¯
- * @param[in] table è¡¨å
- * @param[in] ... è¡¨ä¸­æ‰€éœ€å€¼ï¼Œè‹¥æŸæ¡ä¿¡æ¯ä¸è¾“å…¥åˆ™ç”¨å¯¹åº”çš„é»˜è®¤å€¼å¡«å……
- * @return æ˜¯å¦æˆåŠŸ
- * @retval 0    å¤±è´¥
- * @retval 1    æˆåŠŸ
+ * @brief ÏòÊı¾İ¿âÖ¸¶¨±íÄÚÌí¼ÓĞÅÏ¢
+ * @param[in] table ±íÃû
+ * @param[in] ... ±íÖĞËùĞèÖµ£¬ÈôÄ³ÌõĞÅÏ¢²»ÊäÈëÔòÓÃ¶ÔÓ¦µÄÄ¬ÈÏÖµÌî³ä
+ * @return ÊÇ·ñ³É¹¦
+ * @retval 0    Ê§°Ü
+ * @retval 1    ³É¹¦
  */
-int SqlAdd(char *table, ...);
+__attribute__((unused)) int SqlAdd(char *table, ...);
 
 
 /**
- * @brief åˆ é™¤æ•°æ®åº“ä¸­æŒ‡å®šè¡¨ä¸­çš„æŸä¸€æ¡
- * @param[in] table æ•°æ®åº“ä¸­æŒ‡å®šçš„è¡¨
- * @param[in] key åˆ é™¤é¡¹ç›®çš„ä¸»é”®
- * @return æ˜¯å¦åˆ é™¤æˆåŠŸ
- * @retval 0 å¤±è´¥
- * @retval 1 æˆåŠŸ
+ * @brief É¾³ıÊı¾İ¿âÖĞÖ¸¶¨±íÖĞµÄÄ³Ò»Ìõ
+ * @param[in] table Êı¾İ¿âÖĞÖ¸¶¨µÄ±í
+ * @param[in] keyName Ö÷¼üÃû
+ * @param[in] key Ö÷¼üÊôĞÔ
+ * @return ÊÇ·ñÉ¾³ı³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
  */
-int SqlDel(char *table, char *key);
+__attribute__((unused)) int SqlDel(char *table, char *keyName, char *key);
 
 /**
- * @brief ä¿®æ”¹æŒ‡å®šè¡¨ä¸‹æŸä¸€æ¡çš„å…¨éƒ¨å€¼
- * @param[in] table è¡¨å
- * @param[in] key ä¸»é”®
- * @param[in] value1 å€¼1
- * @param ... åç»§ç›¸å…³å€¼
- * @return æ˜¯å¦ä¿®æ”¹æˆåŠŸ
- * @retval 0 å¤±è´¥
- * @retval 1 æˆåŠŸ
+ * @brief Çå¿ÕÊı¾İ¿âÖĞÖ¸¶¨±í
+ * @param[in] table Êı¾İ¿âÖĞÖ¸¶¨µÄ±í
+ * @return ÊÇ·ñÇå¿Õ³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
  */
-int SqlChangeRow(char *table, char *key, char *value1, ...);
+__attribute__((unused)) int SqlClear(char *table);
 
 /**
- * @brief ä¿®æ”¹æŒ‡å®šè¡¨ä¸‹ç‰¹å®šçš„æŸä¸€æ¡ä¸‹çš„æŸä¸€åˆ—çš„å€¼
- * @param[in] table è¡¨å
- * @param[in] key ä¸»é”®
- * @param[in] colName åˆ—å
- * @param[in] value ä¿®æ”¹åçš„å€¼
- * @return æ˜¯å¦ä¿®æ”¹æˆåŠŸ
- * @retval 0 å¤±è´¥
- * @retval 1 æˆåŠŸ
+ * @brief ĞŞ¸ÄÖ¸¶¨±íÏÂÄ³Ò»ÌõµÄÈ«²¿Öµ
+ * @param[in] table ±íÃû
+ * @param[in] keyName Ö÷¼üÃû
+ * @param[in] key Ö÷¼üÊôĞÔ
+ * @param ... ĞŞ¸ÄºóµÄÖµ
+ * @return ÊÇ·ñĞŞ¸Ä³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
  */
-int SqlChange(char *table, char *key, char *colName, char *value);
+__attribute__((unused)) int SqlChangeRow(char *table, char *keyName, char *key,  ...);
 
 /**
- * @brief è¿”å›æŸè¡¨çš„å…¨éƒ¨ä¿¡æ¯
- * @param[in] table è¯¥è¡¨è¡¨å
- * @param[out] values æ¯ä¸€è¡Œçš„å…¨éƒ¨ä¿¡æ¯
- * @return æ˜¯å¦æŸ¥è¯¢æˆåŠŸ
- * @retval 0 å¤±è´¥
- * @retval 1 æˆåŠŸ
+ * @brief ĞŞ¸ÄÖ¸¶¨±íÏÂÌØ¶¨µÄÄ³Ò»ÌõÏÂµÄÄ³Ò»ÁĞµÄÖµ
+ * @param[in] table ±íÃû
+ * @param[in] keyName Ö÷¼üÃû
+ * @param[in] key Ö÷¼üÊôĞÔ
+ * @param[in] colName ÁĞÃû
+ * @param[in] value ĞŞ¸ÄºóµÄÖµ
+ * @return ÊÇ·ñĞŞ¸Ä³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
  */
-int SqlFindAll(char *table, char** values);
+__attribute__((unused)) int SqlChange(char *table, char *keyName, char *key, char *colName, char *value);
 
 /**
- * @brief åœ¨æŒ‡å®šè¡¨ä¸‹æŸ¥æ‰¾æŸæ¡çš„å…¨éƒ¨ä¿¡æ¯
- * @param[in] table è¡¨å
- * @param[in] key ä¸»é”®
- * @param[out] values å…¨éƒ¨ä¿¡æ¯
- * @attention valueså†…ä¿¡æ¯å…¨éƒ¨ä»¥char*ç±»å‹å­˜å‚¨ï¼Œå¦‚æœæƒ³è¦è·å–å…¶ä»–ç±»å‹æ•°æ®æ³¨æ„ç›¸å…³è½¬æ¢
- * @return æ˜¯å¦æŸ¥è¯¢æˆåŠŸ
- * @retval 0 å¤±è´¥
- * @retval 1 æˆåŠŸ
+ * @brief ·µ»ØÄ³±íµÄÈ«²¿ĞÅÏ¢
+ * @param[in] table ¸Ã±í±íÃû
+ * @param[in] keyName Ö÷¼üÃû
+ * @param[in] key Ö÷¼üÊôĞÔ
+ * @param[out] values Ã¿Ò»ĞĞµÄÈ«²¿ĞÅÏ¢
+ * @return ÊÇ·ñ²éÑ¯³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
  */
-int SqlFindRow(char *table, char *key, char** values);
+__attribute__((unused)) int SqlFindAll(char *table, char values[128][128]);
 
 /**
- * @brief åœ¨æŒ‡å®šè¡¨ä¸‹æŸ¥æ‰¾æŸåˆ—çš„å…¨éƒ¨ä¿¡æ¯
- * @param[in] table è¡¨å
- * @param[in] colName åˆ—å
- * @param[out] values å…¨éƒ¨ä¿¡æ¯
- * @attention valueså†…ä¿¡æ¯å…¨éƒ¨ä»¥char*ç±»å‹å­˜å‚¨ï¼Œå¦‚æœæƒ³è¦è·å–å…¶ä»–ç±»å‹æ•°æ®æ³¨æ„ç›¸å…³è½¬æ¢
- * @return æ˜¯å¦æŸ¥è¯¢æˆåŠŸ
- * @retval 0 å¤±è´¥
- * @retval 1 æˆåŠŸ
+ * @brief ÔÚÖ¸¶¨±íÏÂ²éÕÒÄ³ÌõµÄÈ«²¿ĞÅÏ¢
+ * @param[in] table ±íÃû
+ * @param[in] keyName Ö÷¼üÃû
+ * @param[in] key Ö÷¼üÊôĞÔ
+ * @param[out] values È«²¿ĞÅÏ¢
+ * @attention valuesÄÚĞÅÏ¢È«²¿ÒÔchar*ÀàĞÍ´æ´¢£¬Èç¹ûÏëÒª»ñÈ¡ÆäËûÀàĞÍÊı¾İ×¢ÒâÏà¹Ø×ª»»
+ * @return ÊÇ·ñ²éÑ¯³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
  */
-int SqlFindCol(char *table, char *colName, char** values);
+__attribute__((unused)) int SqlFindRow(char *table, char *keyName, char *key, char values[128][128]);
 
 /**
- * @brief æŸ¥è¯¢æŒ‡å®šè¡¨ä¸‹æ•°æ®æŸä¸€æ¡æŒ‡å®šåˆ—ä¸‹çš„æ•°æ®
- * @param[in] table è¡¨å
- * @param[in] key ä¸»é”®
- * @param[in] colName åˆ—å
- * @param[out] value æŸ¥æ‰¾çš„ä¿¡æ¯
- * @attention valueå†…ä¿¡æ¯ä»¥char*ç±»å‹å‚¨å­˜ï¼Œå¦‚æœè·å–çš„æ˜¯å…¶ä»–ç±»å‹æ•°æ®æ³¨æ„è½¬æ¢
- * @return æ˜¯å¦æŸ¥è¯¢æˆåŠŸ
- * @retval 0 å¤±è´¥
- * @retval 1 æˆåŠŸ
+ * @brief ÔÚÖ¸¶¨±íÏÂ²éÕÒÄ³ÁĞµÄÈ«²¿ĞÅÏ¢
+ * @param[in] table ±íÃû
+ * @param[in] colName ÁĞÃû
+ * @param[out] values È«²¿ĞÅÏ¢
+ * @attention valuesÄÚĞÅÏ¢È«²¿ÒÔchar*ÀàĞÍ´æ´¢£¬Èç¹ûÏëÒª»ñÈ¡ÆäËûÀàĞÍÊı¾İ×¢ÒâÏà¹Ø×ª»»
+ * @return ÊÇ·ñ²éÑ¯³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
  */
-int SqlFind(char *table, char *key, char *colName,char* value);
+__attribute__((unused)) int SqlFindCol(char *table, char *colName, char values[128][128]);
+
+/**
+ * @brief ²éÑ¯Ö¸¶¨±íÏÂÊı¾İÄ³Ò»ÌõÖ¸¶¨ÁĞÏÂµÄÊı¾İ
+ * @param[in] table ±íÃû
+ * @param[in] keyName Ö÷¼üÃû
+ * @param[in] key Ö÷¼üÊôĞÔ
+ * @param[in] colName ÁĞÃû
+ * @param[out] value ²éÕÒµÄĞÅÏ¢
+ * @attention valueÄÚĞÅÏ¢ÒÔchar*ÀàĞÍ´¢´æ£¬Èç¹û»ñÈ¡µÄÊÇÆäËûÀàĞÍÊı¾İ×¢Òâ×ª»»
+ * @return ÊÇ·ñ²éÑ¯³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
+ */
+__attribute__((unused)) int SqlFind(char *table, char *keyName, char *key, char *colName,char* value);
+
+/**
+ * @brief ÎªÖ¸¶¨±íÌí¼ÓÒ»ÁĞ
+ * @param[in] table ±íÃû
+ * @param[in] colName ÁĞÃû
+ * @return ÊÇ·ñÌí¼Ó³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
+ */
+__attribute__((unused)) int SqlAddCol(char *table, char *colName);
+
+/**
+ * @brief ÎªÖ¸¶¨±íÉ¾³ıÄ³Ò»ÁĞ
+ * @param[in] table ±íÃû
+ * @param[in] colName ÁĞÃû
+ * @return ÊÇ·ñÉ¾³ı³É¹¦
+ * @retval 0 Ê§°Ü
+ * @retval 1 ³É¹¦
+ */
+__attribute__((unused)) int SqlDelCol(char *table, char *colName);
 
 #endif //STUDENTMANAGESYSTEM_SQL_H

@@ -22,8 +22,7 @@
  * @retval 0 失败
  * @retval 1 成功
  */
-int ClassAdd(char *id, char *name, char *size);
-
+__attribute__((unused)) int ClassAdd(char *id, char *name, char *size);
 
 /**
  * @brief 删除其中一个班级
@@ -32,7 +31,7 @@ int ClassAdd(char *id, char *name, char *size);
  * @retval 0 失败
  * @retval 1 成功
  */
-int ClassDel(char *id);
+__attribute__((unused)) int ClassDel(char *id);
 
 
 /**
@@ -45,7 +44,7 @@ int ClassDel(char *id);
  * @retval 0 失败
  * @retval 1 成功
  */
-int ClassEdit(char *id, char *name, char *size);
+__attribute__((unused)) int ClassEdit(char *id, char *name, char *size);
 
 /**
  * @brief 编辑选定班级的名称
@@ -55,7 +54,7 @@ int ClassEdit(char *id, char *name, char *size);
  * @retval 0 失败
  * @retval 1 成功
  */
-int ClassEditName(char *id, char *name);
+__attribute__((unused)) int ClassEditName(char *id, char *name);
 
 
 /**
@@ -66,7 +65,7 @@ int ClassEditName(char *id, char *name);
  * @retval 0 失败
  * @retval 1 成功
  */
-int ClassEditSize(char *id, char *size);
+__attribute__((unused)) int ClassEditSize(char *id, char *size);
 
 
 /**
@@ -79,7 +78,7 @@ int ClassEditSize(char *id, char *size);
  * @retval 1 成功
  * @retval 0 失败
  */
-int ClassFind(char *id, char *name, char *size);
+__attribute__((unused))  int ClassFind(char *id, char *name, char *size);
 
 
 #endif //STUDENTMANAGESYSTEM_CLASS_H

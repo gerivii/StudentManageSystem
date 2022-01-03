@@ -21,7 +21,7 @@
  * @retval 0 失败
  * @retval 1 成功
  */
-int StuInfo(char *student_id, char *student_name, char *sex, int age, char *class_id);
+__attribute__((unused)) int StuInfo(char *student_id, char *student_name, char *sex, int age, char *class_id);
 
 /**
  * @brief 查询指定学号学生的姓名
@@ -31,7 +31,7 @@ int StuInfo(char *student_id, char *student_name, char *sex, int age, char *clas
  * @retval 0 失败
  * @retval 1 成功
  */
-int StuName(char *student_id, char *student_name);
+__attribute__((unused)) int StuName(char *student_id, char *student_name);
 
 /**
  * @brief 查询指定学号学生的性别
@@ -41,7 +41,7 @@ int StuName(char *student_id, char *student_name);
  * @retval 0 失败
  * @retval 1 成功
  */
-int StuSex(char *student_id, char *sex);
+__attribute__((unused)) int StuSex(char *student_id, char *sex);
 
 /**
  * @brief 查询指定学号学生的年龄
@@ -51,7 +51,7 @@ int StuSex(char *student_id, char *sex);
  * @retval 0 失败
  * @retval 1 成功
  */
-int StuAge(char *student_id, int age);
+__attribute__((unused)) int StuAge(char *student_id, int age);
 
 /**
  * @brief 查询指定学号学生的班号
@@ -61,7 +61,7 @@ int StuAge(char *student_id, int age);
  * @retval 0 失败
  * @retval 1 成功
  */
-int StuClassId(char *student_id, char *class_id);
+__attribute__((unused)) int StuClassId(char *student_id, char *class_id);
 
 /**
  * @brief 查询某门课程的平均分
@@ -71,22 +71,26 @@ int StuClassId(char *student_id, char *class_id);
  * @retval 0 失败
  * @retval 1 成功
  */
-int Ave(char *course_id, float ave);
+__attribute__((unused)) int Ave(char *course_id, float ave);
 
 /**
  * @brief 查询课程的最高分
  * @param[in] course_id 课程号
  * @param[out] max 最高分
- * @return
+ * @return 是否查询成功
+ * @retval 0 失败
+ * @retval 1 成功
  */
-int Max(char *course_id, float max);
+__attribute__((unused)) int Max(char *course_id, float max);
 
 /**
  * @brief 查询课程的最低分
  * @param[in] course_id 课程号
  * @param[out] max 最低分
- * @return
+ * @return 是否查询成功
+ * @retval 0 失败
+ * @retval 1 成功
  */
-int Min(char *course_id, float min);
+__attribute__((unused)) int Min(char *course_id, float min);
 
 #endif //STUDENTMANAGESYSTEM_STATIST_H
